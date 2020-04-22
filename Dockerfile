@@ -11,6 +11,7 @@ RUN chown -R www-data:www-data /var/www/librarian
 COPY librarian.conf /etc/apache2/sites-enabled/000-default.conf
 COPY php.ini /etc/php/7.2/apache2/
 COPY php.ini /etc/php/7.2/cli/
+COPY ports.conf /etc/apache2/ports.conf
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
