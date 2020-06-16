@@ -5,7 +5,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apache2 
 RUN apt-get install -y wget
 
 RUN mkdir /var/www/librarian
-RUN wget -c https://github.com/mkucej/i-librarian-free/releases/download/5.2.3/I-Librarian-5.2.3-Linux.tar.xz -O - | tar -Jxf - -C /var/www/librarian
+RUN wget -c https://github.com/mkucej/i-librarian-free/releases/download/5.3.0/I-Librarian-5.3.0-Linux.tar.xz -O - | tar -Jxf - -C /var/www/librarian
 RUN chown -R www-data:www-data /var/www/librarian
 
 COPY librarian.conf /etc/apache2/sites-enabled/000-default.conf
